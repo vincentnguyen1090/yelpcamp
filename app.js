@@ -25,7 +25,7 @@ const reviewsRoutes = require('./routes/review')
 const { default: helmet } = require('helmet')
 const MongoDBStore = require('connect-mongo')
 
-const dbUrl = process.end.DB_URL || 'mongodb://localhost:27017/yelp-camp'
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp'
 
 mongoose.connect(dbUrl, {
 
